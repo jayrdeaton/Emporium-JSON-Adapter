@@ -1,0 +1,30 @@
+{
+  "name": "emporium-json-adapter",
+  "version": "0.0.0",
+  "description": "JSON Adapter for Emporium",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/jayrdeaton/Emporium-JSON-Adapter.git"
+  },
+  "keywords": [
+    "JSON",
+    "Emporium",
+    "Adapter",
+    "Data",
+    "Store"
+  ],
+  "author": "Jay Deaton",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/jayrdeaton/Emporium-JSON-Adapter/issues"
+  },
+  "homepage": "https://github.com/jayrdeaton/Emporium-JSON-Adapter#readme",
+  "devDependencies": {
+    "chai": "^4.2.0",
+    "mocha": "^6.0.2"
+  }
+}
