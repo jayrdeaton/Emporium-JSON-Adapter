@@ -1,8 +1,9 @@
 let { is, isnt } = require('amprisand'),
   uuid = require('uuid'),
   faker = require('faker'),
-  Emporium = require('../../../'),
-  { JSONAdapter, Schema } = Emporium,
+  Emporium = require('emporium'),
+  { Schema } = Emporium,
+  JSONAdapter = require('../../'),
   adapter, schema, Storable, storables;
 
 describe('JSONAdapter', () => {

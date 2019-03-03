@@ -4,7 +4,7 @@
   "description": "JSON Adapter for Emporium",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "mocha test"
   },
   "repository": {
     "type": "git",
@@ -24,12 +24,13 @@
   },
   "homepage": "https://github.com/jayrdeaton/Emporium-JSON-Adapter#readme",
   "devDependencies": {
-    "chai": "^4.2.0",
+    "amprisand": "^0.1.3",
     "emporium": "^2.5.19",
     "faker": "^4.1.0",
     "mocha": "^6.0.2"
   },
   "dependencies": {
+    "rimraf": "^2.6.3",
     "uuid": "^3.3.2"
   }
 }
