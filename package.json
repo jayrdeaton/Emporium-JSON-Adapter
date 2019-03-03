@@ -25,6 +25,11 @@
   "homepage": "https://github.com/jayrdeaton/Emporium-JSON-Adapter#readme",
   "devDependencies": {
     "chai": "^4.2.0",
+    "emporium": "^2.5.19",
+    "faker": "^4.1.0",
     "mocha": "^6.0.2"
+  },
+  "dependencies": {
+    "uuid": "^3.3.2"
   }
 }
