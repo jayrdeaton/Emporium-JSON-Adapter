@@ -1,7 +1,6 @@
 let { is, isnt } = require('amprisand'),
-  uuid = require('uuid'),
   faker = require('faker'),
-  Emporium = require('emporium'),
+  Emporium = require('@emporium/core'),
   { Schema } = Emporium,
   JSONAdapter = require('../../'),
   adapter, schema, Storable, storables;
@@ -14,16 +13,11 @@ describe('JSONAdapter', () => {
         pretty: true
       });
       adapter.is(Object);
-      let emporium = new Emporium();
-      emporium.setAdapter(adapter);
-      emporium._adapter.is(adapter);
-      emporium.setIdentifier('id');
-      emporium._identifier.is('id');
-      schema = new Schema({
-        id: {type: String, default: uuid.v1},
+      const emporium = new Emporium(adapter);
+      Storable = emporium.define('Test_Model', {
+        id: {type: String, default: faker.random.uuid},
         key: String
       });
-      Storable = emporium.storable('Test_Model', schema);
       is(Storable);
     });
   });
@@ -42,7 +36,7 @@ describe('JSONAdapter', () => {
   });
   describe('Storable.create({})', () => {
     it('should create a new storable with set values', async () => {
-      let object = {id: uuid.v1(), key: faker.random.word()};
+      let object = {id: faker.random.uuid(), key: faker.random.word()};
       let storable = await Storable.create(object);
       storable.is(Object);
       storable.is(object);
@@ -51,8 +45,8 @@ describe('JSONAdapter', () => {
   });
   describe('Storable.create([])', () => {
     it('should create two new storables with set values', async () => {
-      let a = {id: uuid.v1(), key: faker.random.word()};
-      let b = {id: uuid.v1(), key: faker.random.word()};
+      let a = {id: faker.random.uuid(), key: faker.random.word()};
+      let b = {id: faker.random.uuid(), key: faker.random.word()};
       storables = await Storable.create([new Storable(a), new Storable(b)]);
       storables.is(Array);
       storables.length.is(2);
