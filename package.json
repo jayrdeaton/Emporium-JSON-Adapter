@@ -1,7 +1,8 @@
 {
-  "name": "emporium-json-adapter",
+  "name": "@emporium/json-adapter",
   "version": "0.0.0",
   "description": "JSON Adapter for Emporium",
+  "private": false,
   "main": "index.js",
   "scripts": {
     "test": "mocha test"

@@ -1,8 +1,7 @@
-let { join } = require('path'),
-  { arrayQuery, removeArrayEntry, updateArrayEntry } = require('../helpers'),
-  { checkDirectory, readFile, writeFile } = require('../helpers');
+const { join } = require('path'),
+  { arrayQuery, checkDirectory, readFile, removeArrayEntry, updateArrayEntry, writeFile } = require('../helpers');
 
-let JSONAdapter = class JSONAdapter {
+const JSONAdapter = class JSONAdapter {
   constructor(data) {
     this.name = 'Emporium';
     this.path = '~/.emporium';
